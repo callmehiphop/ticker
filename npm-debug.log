@@ -1,0 +1,109 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/taco/.nvm/versions/node/v6.2.1/bin/node',
+1 verbose cli   '/Users/taco/.nvm/versions/node/v6.2.1/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '--access=public' ]
+2 info using npm@3.9.3
+3 info using node@v6.2.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/taco/projects/ticker',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/taco/.npm/@callmehiphop/ticker/0.1.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/taco/.npm correctMkdir not in flight; initializing
+10 info lifecycle @callmehiphop/ticker@0.1.0~prepublish: @callmehiphop/ticker@0.1.0
+11 silly lifecycle @callmehiphop/ticker@0.1.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/taco/.npm/@callmehiphop/ticker/0.1.0/package.tgz',
+12 verbose tar pack   '/Users/taco/projects/ticker' ]
+13 verbose tarball /Users/taco/.npm/@callmehiphop/ticker/0.1.0/package.tgz
+14 verbose folder /Users/taco/projects/ticker
+15 verbose addLocalTarball adding from inside cache /Users/taco/.npm/@callmehiphop/ticker/0.1.0/package.tgz
+16 verbose correctMkdir /Users/taco/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd @callmehiphop/ticker@0.1.0
+18 verbose afterAdd /Users/taco/.npm/@callmehiphop/ticker/0.1.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/taco/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/taco/.npm/@callmehiphop/ticker/0.1.0/package/package.json written
+21 silly publish { name: '@callmehiphop/ticker',
+21 silly publish   version: '0.1.0',
+21 silly publish   description: 'Simple event-based fixed-rate game loop.',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'eslint ./*.js && mocha ./test.js' },
+21 silly publish   repository: { type: 'git', url: 'git://github.com/callmehiphop/ticker.git' },
+21 silly publish   keywords: [ 'game', 'loop', 'timestep', 'ticker', 'tick', 'fixed' ],
+21 silly publish   author: { name: 'Dave Gramlich', email: 'callmehiphop@gmail.com' },
+21 silly publish   license: 'MIT',
+21 silly publish   dependencies: { 'performance-now': '^0.2.0', raf: '^3.3.0' },
+21 silly publish   devDependencies: { eslint: '^3.7.1', mocha: '^3.1.0' },
+21 silly publish   readme: '# ticker\n\n> Simple event based game loop based on the Game Programming Patterns [Game Loop](http://gameprogrammingpatterns.com/game-loop.html) chapter.\n\n## Install\n\n```sh\n$ npm install --save @callmehiphop/ticker\n```\n\n## Usage\n\n```js\nconst Ticker = require(\'@callmehiphop/ticker\');\nconst ticker = new Ticker();\n\nticker.on(\'update\', (dt) => {\n  // update all the things!\n});\n\nticker.on(\'render\', () => {\n  // render all the things!\n});\n\n// stop the ticker\nticker.stop();\n\n// resume the ticker\nticker.resume();\n```\n\n## API\n\n### new Ticker(el, [fps])\n\n#### el\n\nType: `canvas`\n\nHTML element to be passed into `requestAnimationFrame` - presumably canvas.\n\n#### fps\n\nType: `number`<br>\nDefault: `60`\n\nDesired frames per second, this will alter how often the `update` event is fired.\n\n```js\nconst canvas = document.getElementById(\'my-canvas\');\nconst ticker = new Ticker(canvas, 30);\n```\n\n### ticker.on(\'update\', handler)\n\nIndicates models should be updated with provided delta time.\n\n#### handler(dt)\n\nType: `function`\n\n```js\nticker.on(\'update\', (dt) => {\n  // Update all your models.\n});\n```\n\n### ticker.on(\'render\', handler)\n\nIndicates that you should draw the current state of your models.\n\n#### handler(frameStep)\n\n`frameStep` is how far into the current frame we are.\n\nType: `function`\n\n```js\nticker.on(\'render\', (frameStep) => {\n  // Render all your models.\n});\n```\n\n### ticker.stop()\n\nStops the ticker.\n\n```js\nticker.stop();\n```\n\n### ticker.resume()\n\nResumes the ticker.\n\n```js\nticker.resume();\n```\n\n## License\n\nMIT\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'dc340fd0b45cb2a2829de078a42d4728e3b156f2',
+21 silly publish   bugs: { url: 'https://github.com/callmehiphop/ticker/issues' },
+21 silly publish   homepage: 'https://github.com/callmehiphop/ticker#readme',
+21 silly publish   _id: '@callmehiphop/ticker@0.1.0',
+21 silly publish   _shasum: 'c4623de9a37866f2af0ab6b5f580a797c20991ba',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name @callmehiphop/ticker
+24 silly mapToRegistry scope (from package name) @callmehiphop
+25 verbose mapToRegistry no registry URL found in name for scope @callmehiphop
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry data Result {
+28 silly mapToRegistry   raw: '@callmehiphop/ticker',
+28 silly mapToRegistry   scope: '@callmehiphop',
+28 silly mapToRegistry   name: '@callmehiphop/ticker',
+28 silly mapToRegistry   rawSpec: '',
+28 silly mapToRegistry   spec: 'latest',
+28 silly mapToRegistry   type: 'tag' }
+29 silly mapToRegistry uri https://registry.npmjs.org/@callmehiphop%2fticker
+30 verbose publish registryBase https://registry.npmjs.org/
+31 silly publish uploading /Users/taco/.npm/@callmehiphop/ticker/0.1.0/package.tgz
+32 verbose request uri https://registry.npmjs.org/@callmehiphop%2fticker
+33 verbose request sending authorization for write operation
+34 info attempt registry request try #1 at 1:46:18 AM
+35 verbose request using bearer token for auth
+36 verbose request id 2d9b742102074577
+37 http request PUT https://registry.npmjs.org/@callmehiphop%2fticker
+38 http 403 https://registry.npmjs.org/@callmehiphop%2fticker
+39 verbose headers { 'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=0',
+39 verbose headers   'content-length': '128',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Wed, 05 Oct 2016 05:46:20 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'x-served-by': 'cache-ord1725-ORD',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1475646379.408637,VS0,VE1382' }
+40 verbose request invalidating /Users/taco/.npm/registry.npmjs.org/_40callmehiphop_252fticker on PUT
+41 error publish Failed PUT 403
+42 verbose stack Error: "You cannot publish over the previously published version 0.1.0. Try bumping the version to 1.0.0" : @callmehiphop/ticker
+42 verbose stack     at makeError (/Users/taco/.nvm/versions/node/v6.2.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+42 verbose stack     at CachingRegistryClient.<anonymous> (/Users/taco/.nvm/versions/node/v6.2.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+42 verbose stack     at Request._callback (/Users/taco/.nvm/versions/node/v6.2.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+42 verbose stack     at Request.self.callback (/Users/taco/.nvm/versions/node/v6.2.1/lib/node_modules/npm/node_modules/request/request.js:200:22)
+42 verbose stack     at emitTwo (events.js:106:13)
+42 verbose stack     at Request.emit (events.js:191:7)
+42 verbose stack     at Request.<anonymous> (/Users/taco/.nvm/versions/node/v6.2.1/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+42 verbose stack     at emitOne (events.js:101:20)
+42 verbose stack     at Request.emit (events.js:188:7)
+42 verbose stack     at IncomingMessage.<anonymous> (/Users/taco/.nvm/versions/node/v6.2.1/lib/node_modules/npm/node_modules/request/request.js:988:12)
+43 verbose statusCode 403
+44 verbose pkgid @callmehiphop/ticker
+45 verbose cwd /Users/taco/projects/ticker
+46 error Darwin 15.2.0
+47 error argv "/Users/taco/.nvm/versions/node/v6.2.1/bin/node" "/Users/taco/.nvm/versions/node/v6.2.1/bin/npm" "publish" "--access=public"
+48 error node v6.2.1
+49 error npm  v3.9.3
+50 error code E403
+51 error "You cannot publish over the previously published version 0.1.0. Try bumping the version to 1.0.0" : @callmehiphop/ticker
+52 error If you need help, you may report this error at:
+52 error     <https://github.com/npm/npm/issues>
+53 verbose exit [ 1, true ]

@@ -1,0 +1,31 @@
+{
+  "name": "@callmehiphop/ticker",
+  "version": "0.1.0",
+  "description": "Simple event-based fixed-rate game loop.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ./*.js && mocha ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/callmehiphop/ticker.git"
+  },
+  "keywords": [
+    "game",
+    "loop",
+    "timestep",
+    "ticker",
+    "tick",
+    "fixed"
+  ],
+  "author": "Dave Gramlich <callmehiphop@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "performance-now": "^0.2.0",
+    "raf": "^3.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.7.1",
+    "mocha": "^3.1.0"
+  }
+}
