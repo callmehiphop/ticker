@@ -48,7 +48,7 @@ Ticker.prototype.tick = function() {
   var elapsed = current - this._previous;
   var render = false;
 
-  this._prevous = current;
+  this._previous = current;
   this._lag += elapsed;
 
   while (this._lag >= this._frameSpeed) {
