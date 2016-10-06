@@ -1,6 +1,6 @@
 {
   "name": "@callmehiphop/ticker",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple event-based fixed-rate game loop.",
   "main": "index.js",
   "scripts": {
